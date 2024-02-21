@@ -3,35 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<title>Гостиницы Седоны</title>
+  <link rel="stylesheet" href="styles/style.css">
   </head>
 <body>
   <header class="inner-header">
     <nav class="inner-navigation">
-      <img src="images/logo.svg" width="140" height="70" alt="Логотип Седоны">
+      <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип Седоны">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link" href="index.html">Главная</a>
+          <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
         </li><li class="navigation-item">
-          <a class="navigation-link-current" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
       <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
+        <li class="navigation-user-list">
           <a class="navigation-link " href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Избранное 12</span>
+        <li class="navigation-user-list">
+          <a class="navigation-user-link" href="#">
+            <span class="visually-hidden">Избранное 12 позиций</span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Забронировать</span>
+        <li class="navigation-user-item">
+          <a class="navigation-user-link navigation-book-button" href="#">
+            Хочу сюда!
           </a>
         </li>
       </ul>
@@ -39,7 +40,7 @@
   </header>
 
 <main class="main-inner">
-  <header class="inner-header">
+  <header class="main-inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
@@ -56,7 +57,7 @@
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктура:</legend>
-        <ul>
+        <ul class="infrastructure-list">
           <li class="catalog-filter-item">
             <label for="infrastructure1">
               <input type="checkbox" id="infrastructure1" name="infrastructure1" value="Pool" checked>
@@ -212,7 +213,7 @@
       </li>
     </ul>
   </section>
-  <section class="newsletters">
+  <section class="newsletters-inner">
     <h2 class="newsletters-title">Подпишитесь на рассылку</h2>
     <p class="newsletters-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="newsletters-form" action="https://echo.htmlacademy.ru/" method="post">
