@@ -40,9 +40,12 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
 }
 
+.page-content {
+  background-color: #ffffff;
+}
 .page-header {
 color: #000000;
 background-color: #FFFFFF;
@@ -73,6 +76,7 @@ background-color: #FFFFFF;
 .navigation-book-button {
   color: #FFFFFF;
   background-color: #756157;
+  font-family: inherit;
 }
 
 .main-index {
@@ -84,7 +88,7 @@ background-color: #FFFFFF;
 
 .page-hero {
   background-image: url("../images/mountains-page-hero.jpg") ;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -118,6 +122,19 @@ background-color: #FFFFFF;
 
 .reasons-title-description {
   font-weight: 400;
+}
+
+.card-dark {
+  background-color: #82B3D3;
+  color:#FFFFFF;
+}
+
+.card-light {
+  background-color: #83B3D31F;
+}
+
+.card-medium {
+  background-color: #83B3D333;
 }
 
 .promo {
@@ -173,9 +190,10 @@ background-color: #FFFFFF;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 36px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
+  background-color: #756157;
 }
 
 .newsletters {
@@ -206,6 +224,7 @@ background-color: #FFFFFF;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+  font-family: inherit;
 }
 
 .newsletters-button {
@@ -216,6 +235,7 @@ background-color: #FFFFFF;
   background-color: #82B3D3;
   color:#FFFFFF;
   text-transform: uppercase;
+  font-family: inherit;
 }
 
 .footer-contacts-phone {
