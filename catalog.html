@@ -6,22 +6,22 @@
   <link rel="stylesheet" href="styles/style.css">
   </head>
 <body>
-  <div class="page-content">
+  <div class="page-container">
   <header class="inner-header">
     <nav class="inner-navigation">
       <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип Седоны">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
+          <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
         </li><li class="navigation-item">
-          <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-user">
-        <li class="navigation-user-list">
+      <ul class="navigation-user-list">
+        <li class="navigation-user-item">
           <a class="navigation-link " href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
@@ -54,9 +54,9 @@
   </header>
 
   <section class="catalog-products">
-    <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+    <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="catalog-filter-group">
+      <fieldset class="catalog-filter-group infrastructure-form">
         <legend class="catalog-filter-title">Инфраструктура:</legend>
         <ul class="infrastructure-list">
           <li class="catalog-filter-item">
@@ -80,38 +80,59 @@
         </ul>
       </fieldset>
 
-      <fieldset class="catalog-filter-group">
+      <fieldset class="catalog-filter-group accommodation-form">
         <legend class="catalog-filter-title">Тип Жилья:</legend>
         <ul>
         <li class="catalog-filter-item">
-          <label for="accomodation1">
-            <input type="radio" id="accomodation1" name="accomodation" value="Hotel" checked>
+          <label for="accommodation1">
+            <input type="radio" id="accomodation1" name="accommodation" value="Hotel" checked>
             Гостиница
           </label>
         </li>
         <li class="catalog-filter-item">
-          <label for="accomodation2">
-            <input type="radio" id="accomodation2" name="accomodation" value="Motel">
+          <label for="accommodation2">
+            <input type="radio" id="accomomodation2" name="accommodation" value="Motel">
             Мотель
           </label>
         </li>
         <li class="catalog-filter-item">
-          <label for="accomodation3">
-            <input type="radio" id="accomodation3" name="accomodation" value="Apartment">
+          <label for="accommodation3">
+            <input type="radio" id="accomomdation3" name="accommodation" value="Apartment">
             Апартаменты
           </label>
         </li>
         </ul>
-        <div class="price-filter">
-          <h2 class="price-filter-title">Стоимость, ₽:</h2>
 
-        </div>
       </fieldset>
-      <button class="button-submit" type="submit">Применить</button>
-      <button class="button-reset" type="reset">Сбросить</button>
+      <div class="price-filter">
+        <h2 class="price-filter-title">Стоимость, ₽:</h2>
+        <div class="price-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="2500">
+          </div>
+          <div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-max" value="7500">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="progress"></div>
+        </div>
+        <div class="range-input">
+          <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+          <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+        </div>
+      </div>
+      <div class="form-buttons">
+        <button class="button-submit" type="submit">Применить</button>
+        <button class="button-reset" type="reset">Сбросить</button>
+      </div>
+
     </form>
   </section>
-  <section class="catalog">
+  <section class="catalog-menu">
     <h2 class="catalog-title">Найдено гостиниц: 38</h2>
       <select class="select-control" aria-label="Сортировка">
         <option value="popular">Сначала популярное</option>
@@ -182,7 +203,7 @@
       </li>
       <li class="product-card">
         <a class="product-card-link" href="#">
-          <img class="product-card-image"src="images/hotel-4.jpg" width="300" height="212"  alt="GreenTree Inn">
+          <img class="product-card-image" src="images/hotel-4.jpg" width="300" height="212"  alt="GreenTree Inn">
         </a>
         <a class="product-card-link" href="#">
           <h3 class="product-card-title">GreenTree Inn</h3>
@@ -246,10 +267,8 @@
       </li>
     </ul>
   </section>
-  <section class="footer-contacts">
-    <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <p class="about-text"><a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
-  </section>
+  <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+  <p class="about-text"><a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
 </footer>
 </div>
 </body>
