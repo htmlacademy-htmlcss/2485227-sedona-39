@@ -41,6 +41,7 @@
   </header>
 
 <main class="main-inner">
+  <section class="filter">
   <header class="main-inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
     <ul class="breadcrumbs">
@@ -82,7 +83,7 @@
 
       <fieldset class="catalog-filter-group accommodation-form">
         <legend class="catalog-filter-title">Тип Жилья:</legend>
-        <ul>
+        <ul class="accommodation-list">
         <li class="catalog-filter-item">
           <label for="accommodation1">
             <input type="radio" id="accomodation1" name="accommodation" value="Hotel" checked>
@@ -104,33 +105,30 @@
         </ul>
 
       </fieldset>
-      <div class="price-filter">
-        <h2 class="price-filter-title">Стоимость, ₽:</h2>
-        <div class="price-input">
-          <div class="field">
-            <span>Min</span>
-            <input type="number" class="input-min" value="2500">
+      <fieldset class="slider"><legend class="filter-group-title">Стоимость, ₽:</legend>
+        <div class="price-wrapper">
+          <div class="price-input-wrapper">
+            <label class="price-label" for="price">o</label>
+            <input id="price" class="price" type="number" placeholder="®" name="from">
           </div>
-          <div class="separator">-</div>
-          <div class="field">
-            <span>Max</span>
-            <input type="number" class="input-max" value="7500">
+          <div class="price-input-wrapper">
+            <label class="price-label" for="price">до</label>
+            <input class="price" type="number" placeholder="9000" name="to">
           </div>
         </div>
-        <div class="slider">
-          <div class="progress"></div>
-        </div>
-        <div class="range-input">
-          <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-          <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
-        </div>
-      </div>
-      <div class="form-buttons">
+          <div class="price-range">
+            <button class="button-low" type="button"></button>
+            <div class="price-filled"></div>
+            <button class="button-high" type="button"></button>
+          </div>
+      </fieldset>
+      <fieldset class="form-buttons">
         <button class="button-submit" type="submit">Применить</button>
         <button class="button-reset" type="reset">Сбросить</button>
-      </div>
+      </fieldset>
 
     </form>
+  </section>
   </section>
   <section class="catalog-menu">
     <h2 class="catalog-title">Найдено гостиниц: 38</h2>
