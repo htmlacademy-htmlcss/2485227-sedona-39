@@ -31,11 +31,10 @@
             <span class="visually-hidden">Избранное 12 позиций</span>
           </a>
         </li>
-        <li class="navigation-user-item">
-          <a class="navigation-user-link navigation-book-button" href="#">
+        <li class="navigation-user-item navigation-book-button">
+          <a class="navigation-user-link navigation-book-button-text" href="#">
             Хочу сюда!
           </a>
-        </li>
       </ul>
     </nav>
   </header>
@@ -86,19 +85,19 @@
         <ul class="accommodation-list">
         <li class="catalog-filter-item">
           <label for="accommodation1">
-            <input type="radio" id="accomodation1" name="accommodation" value="Hotel" checked>
+            <input type="radio" id="accommodation1" name="accommodation" value="Hotel" checked>
             Гостиница
           </label>
         </li>
         <li class="catalog-filter-item">
           <label for="accommodation2">
-            <input type="radio" id="accomomodation2" name="accommodation" value="Motel">
+            <input type="radio" id="accommodation2" name="accommodation" value="Motel">
             Мотель
           </label>
         </li>
         <li class="catalog-filter-item">
           <label for="accommodation3">
-            <input type="radio" id="accomomdation3" name="accommodation" value="Apartment">
+            <input type="radio" id="accommodation3" name="accommodation" value="Apartment">
             Апартаменты
           </label>
         </li>
@@ -108,8 +107,8 @@
       <fieldset class="slider"><legend class="filter-group-title">Стоимость, ₽:</legend>
         <div class="price-wrapper">
           <div class="price-input-wrapper">
-            <label class="price-label" for="price">o</label>
-            <input id="price" class="price" type="number" placeholder="®" name="from">
+            <label class="price-label" for="price">от</label>
+            <input id="price" class="price" type="number" placeholder="0" name="from">
           </div>
           <div class="price-input-wrapper">
             <label class="price-label" for="price">до</label>
@@ -123,8 +122,8 @@
           </div>
       </fieldset>
       <fieldset class="form-buttons">
-        <button class="button-submit" type="submit">Применить</button>
-        <button class="button-reset" type="reset">Сбросить</button>
+        <button class="button-filter-submit" type="submit">Применить</button>
+        <button class="button-filter-reset" type="reset">Сбросить</button>
       </fieldset>
 
     </form>
@@ -161,7 +160,7 @@
         <a class="product-card-link" href="#">
           <img class="product-card-image" src="images/hotel-1.jpg" width="300" height="212"  alt="Amara Resort &amp; Spa">
         </a>
-        <a class="product-card-link" href="#">
+        <a class="product-card-link " href="#">
           <h3 class="product-card-title">Amara Resort &amp; Spa</h3>
         </a>
         <p class="product-type">Гостиница</p>
@@ -171,6 +170,7 @@
         <p class="stars"><span class=" four-stars visually-hidden">Отель 4 звезды</span></p>
         <p class="card-rating">Рейтинг: 8,5</p>
       </li>
+
       <li class="product-card">
         <a class="product-card-link" href="#">
           <img class="product-card-image" src="images/hotel-2.jpg" width="300" height="212"  alt="Villas at Poco Diablo">
@@ -227,7 +227,9 @@
       <li class="pagination-item">
         <a class="pagination-link" href="#">4</a>
       </li>
-      <span class="pagination-link-divider">...</span>
+      <li class="pagination-item">
+        <span class="pagination-link-divider">...</span>
+      </li>
       <li class="pagination-item">
         <a class="pagination-link" href="#">10</a>
       </li>
@@ -245,6 +247,7 @@
   </section>
 </main>
 <footer class="page-footer">
+  <div class="socials-wrapper">
   <section class="footer-socials">
     <h2 class=" page-footer-title visually-hidden">Социальные сети</h2>
     <ul class="footer-social-list">
@@ -266,7 +269,8 @@
     </ul>
   </section>
   <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-  <p class="about-text"><a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
+  <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="about-text" src="../images/Logo-html-academy.svg" height="33px" width="115px" alt="html academy"></a>
+  </div>
 </footer>
 </div>
 </body>
