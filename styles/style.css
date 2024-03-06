@@ -61,6 +61,7 @@ body {
   flex-grow: 1;
   flex-wrap: wrap;
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 #00000033;
 }
 
 .page-header, .inner-header {
@@ -354,7 +355,7 @@ body {
   text-align: center;
   background-color: #000000;
   color: #FFFFFF;
-  background-image: url("../images/blurred-background.jpg");
+  background-image: url("../images/Subscribe-blurred.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   box-sizing: border-box;
