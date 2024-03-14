@@ -7,44 +7,52 @@
   </head>
 <body>
   <div class="page-container">
-  <header class="inner-header">
-    <nav class="inner-navigation">
-      <img class="logo" src="images/sedona-logo.svg" width="140" height="70" alt="Логотип Седоны">
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="index.html">Главная</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">О Седоне</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
-        </li>
-      </ul>
-      <ul class="navigation-user-list">
-        <li class="navigation-user-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Поиск</span>
-          </a>
-        </li>
-        <li class="navigation-user-list">
-          <a class="navigation-user-link" href="#">
-            <span class="visually-hidden">Избранное 12 позиций</span>
-          </a>
-        </li>
-        <li class="navigation-user-item navigation-book-button">
-          <a class="navigation-user-link navigation-book-button-text" href="#">
-            Хочу сюда!
-          </a>
-      </ul>
-    </nav>
-  </header>
+    <header class="inner-header">
+      <nav class="inner-navigation">
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="images/icons/sedona-logo.svg" width="140" height="70" alt="Логотип Седоны">
+        </a>
+        <ul class="navigation-list list-reset">
+          <li class="navigation-item">
+            <a class="navigation-link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li><li class="navigation-item">
+            <a class="navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation-user-list list-reset">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link " href="#">
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                <path fill="#000" d="m19.5 18-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7 3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z"/>
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
+              <svg class="navigation-icon fovourites-counter" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                <path fill="#000" d="M9.9 19a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6.1 6.9 6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+              </svg>
+              <span class="visually-hidden">Избранное 12 позиций</span>
+            </a>
+          </li>
+          <li class="navigation-book-button">
+            <a class="navigation-user-link navigation-book-button-text" href="#">
+              Хочу сюда!
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
 <main class="main-inner">
   <section class="filter">
   <header class="main-inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
-    <ul class="breadcrumbs">
+    <ul class="breadcrumbs list-reset">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-item-link" href="index.html"><span class="visually-hidden">Домой</span></a>
       </li>
@@ -59,7 +67,7 @@
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-group infrastructure-form">
         <legend class="catalog-filter-title">Инфраструктура:</legend>
-        <ul class="infrastructure-list">
+        <ul class="infrastructure-list list-reset">
           <li class="catalog-filter-item">
             <label for="infrastructure1">
               <input type="checkbox" id="infrastructure1" name="infrastructure1" value="Pool" checked>
@@ -83,7 +91,7 @@
 
       <fieldset class="catalog-filter-group accommodation-form">
         <legend class="catalog-filter-title">Тип Жилья:</legend>
-        <ul class="accommodation-list">
+        <ul class="accommodation-list list-reset">
         <li class="catalog-filter-item">
           <label for="accommodation1">
             <input type="radio" id="accommodation1" name="accommodation" value="Hotel" checked>
@@ -137,7 +145,7 @@
         <option value="cheap">Сначала дешёвое</option>
         <option value="expensive">Сначала дорогое</option>
       </select>
-      <ul class="catalog-view-list">
+      <ul class="catalog-view-list list-reset">
         <li class="catalog-view-item">
           <a href="#" class="catalog-view">
             <span class="visually-hidden">Показать плитками</span>
@@ -156,7 +164,7 @@
       </ul>
   </section>
   <section class="products">
-    <ul class="product-list">
+    <ul class="product-list list-reset">
       <li class="product-card">
         <a class="product-card-link" href="#">
           <img class="product-card-image" src="images/amara-resort-and-spa.jpg" width="300" height="212"  alt="Amara Resort &amp; Spa">
@@ -215,7 +223,7 @@
         <p class="card-rating">Рейтинг: 5,0</p>
       </li>
     </ul>
-    <ul class="pagination-list">
+    <ul class="pagination-list list-reset">
       <li class="pagination-item">
         <a class="pagination-link pagination-link-current" href="catalog.html">1</a>
       </li>
@@ -251,26 +259,35 @@
   <div class="socials-wrapper">
   <section class="footer-socials">
     <h2 class=" page-footer-title visually-hidden">Социальные сети</h2>
-    <ul class="footer-social-list">
+    <ul class="footer-social-list list-reset">
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="socials-button" href="#">
+          <svg class="socials-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="25" height="15" fill="none" viewBox="0 0 25 15">
+            <path fill="#83B3D3" fill-rule="evenodd" d="M24.1 1.8c.2-.5 0-1-.8-1h-2.6c-.7 0-1 .4-1.1.8 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.8V1.8c0-.7-.2-1-.8-1h-4c-.5 0-.8.4-.8.6 0 .7 1 .8 1 2.6v3.8c0 .8 0 1-.4 1-.9 0-3-3.3-4.3-7-.3-.7-.5-1-1.2-1H1.6c-.8 0-1 .4-1 .8 0 .7 1 4 4.2 8.5C7 13.2 10 15 12.8 15c1.7 0 1.9-.4 1.9-1v-2.4c0-.7.2-.8.7-.8.4 0 1 .1 2.6 1.6 1.8 1.8 2 2.6 3 2.6h2.7c.7 0 1.1-.4 1-1.1-.3-.8-1.2-1.8-2.3-3-.6-.8-1.5-1.5-1.8-2-.4-.4-.3-.6 0-1 0 0 3.2-4.5 3.5-6Z" clip-rule="evenodd"/>
+          </svg>
           <span class="visually-hidden">ВКонтакте</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="socials-button" href="#">
+          <svg class="socials-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none" viewBox="0 0 18 16">
+            <path fill="#83B3D3" d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z"/>
+          </svg>
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="#">
+        <a class="socials-button" href="#">
+          <svg class="socials-icon"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none" viewBox="0 0 23 18">
+            <path fill="#83B3D3" d="M19 .4H3.4C1.6.4.3 2 .3 3.8v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.8C22.1 2 20.8.4 19 .4ZM8 12.9v-8l7.3 4-7.3 4Z"/>
+          </svg>
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
   </section>
   <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-  <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="about-text" src="../images/Logo-html-academy.svg" height="33" width="115" alt="html academy"></a>
+  <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="about-text" src="images/icons/logo-html-academy.svg" height="33" width="115" alt="html academy"></a>
   </div>
 </footer>
 </div>
