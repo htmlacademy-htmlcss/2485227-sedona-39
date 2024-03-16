@@ -449,7 +449,7 @@ transform: translateX(-50%);
 
 .newsletters {
   text-align: center;
-  background-color: #000000;
+  background-color: #756157;
   color: #ffffff;
   background-image: url("../images/subscribe-blurred.jpg");
   background-size: 100% auto;
@@ -726,6 +726,10 @@ transform: translate(50%, -50%);
 
 .slider {
   border: none;
+}
+
+.button {
+  cursor: pointer;
 }
 
 .form-buttons {
