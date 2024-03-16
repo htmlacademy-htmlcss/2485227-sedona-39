@@ -77,6 +77,10 @@ body {
   column-gap: 30px;
 }
 
+.logo:hover {
+  opacity: 0.6;
+}
+
 .logo-img {
   margin-bottom: -10px;
 }
@@ -108,6 +112,19 @@ body {
   display: block;
   padding: 20px 16px;
 
+}
+
+/*Почему не работает(( */
+.button-icon-brown:hover svg {
+  fill: #756157;
+}
+
+.button-icon-brown:focus svg{
+  fill: #756157;
+}
+
+.button-icon-brown:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-link[aria-current] {
@@ -149,6 +166,38 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.button-brown:hover {
+  background-color: #615048;
+}
+
+.button-brown:focus {
+  background-color: #615048;
+}
+
+.button-brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-blue:hover {
+  background-color: #68A2CA;
+}
+
+.button-blue:focus {
+  background-color: #68A2CA;
+}
+
+.button-blue:active {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.button-blue, .button-brown:disabled {
+  background-color: #E5E5E5;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-book-button {
@@ -520,6 +569,19 @@ transform: translateX(-50%);
   left: 0;
 }
 
+/*Тоже не работает по той же причине видимо */
+.button-icon-blue:hover svg {
+  fill: #68A2CA;
+}
+
+.button-icon-blue:focus svg {
+  fill: #68A2CA;
+}
+
+.button-icon-blue:active svg {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .footer-contacts-phone {
   font-size: 40px;
   line-height: 40px;
@@ -528,6 +590,20 @@ transform: translateX(-50%);
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+
+.footer-contacts-phone:hover {
+  fill: #756157;
+}
+
+.footer-contacts-phone:focus {
+  fill: #756157;
+}
+
+.footer-contacts-phone:active {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 
 .htmlacademy-link {
   display: flex;
@@ -605,6 +681,18 @@ transform: translate(50%, -50%);
   left: 0;
 }
 
+.breadcrumbs-item:hover {
+  color: (255, 255, 255, 0.6);
+}
+
+.breadcrumbs-item:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-item:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .catalog-filter {
   margin: 0 auto;
   display: flex;
@@ -677,6 +765,22 @@ transform: translate(50%, -50%);
   border-radius: 4px;
 }
 
+.button-transparent:hover {
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  border: solid 3px #83B3D3;
+}
+
+.button-transparent:active {
+  opacity: 0.3;
+}
+
+.button-transparent:disabled {
+  opacity: 0.1;
+}
+
 .catalog-filter-group {
   text-align: left;
   color: #ffffff;
@@ -737,12 +841,23 @@ transform: translate(50%, -50%);
   max-width: 160px;
   display: flex;
   gap: 8px;
+}
 
+.catalog-view-button:hover {
+  border: 2px solid #000000;
+}
+
+.catalog-view-button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.catalog-view-button:active {
+  border: 2px solid #000000;
 }
 
 .catalog-view-button {
   padding: 17px 16px;
-  border: solid 1px black;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
   position: relative;
   display: flex;
@@ -910,6 +1025,18 @@ transform: translate(50%, -50%);
   text-decoration: none;
   border-radius: 4px;
   display: block;
+}
+
+.pagination-link:hover:not(.pagination-link-current) {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus:not(.pagination-link-current) {
+  border: 1px solid #82B3D3;
+}
+
+.pagination-link:active:not(.pagination-link-current) {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-item {
