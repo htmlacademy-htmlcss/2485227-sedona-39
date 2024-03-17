@@ -73,12 +73,15 @@ body {
 
 .page-header{
   z-index: 1;
+  padding: 0 70px;
+}
+
+.inner-header {
+  padding: 0 70px;
 }
 
 .page-navigation, .inner-navigation {
   display: flex;
-  margin: 0 auto;
-  width: 1060px;
   justify-content: space-between;
   column-gap: 30px;
 }
@@ -92,7 +95,6 @@ body {
 }
 
 .navigation-list {
-  max-width: 339px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -102,9 +104,9 @@ body {
   margin: 0;
   padding: 0;
   margin-left: auto;
-  flex-wrap: wrap;
   min-width: 268px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .navigation-link {
@@ -178,7 +180,7 @@ body {
 
 .navigation-user-item {
   position: relative;
-  padding-left: 12px;
+  padding-left: 9px;
   padding-right: 12px;
 }
 
@@ -190,6 +192,26 @@ body {
   right: 0;
   left: 0;
 }
+
+.navigation-user-link {
+  position: relative;
+}
+
+/*почему не умещается в кружок?*/
+.favourites-counter {
+  font-family: inherit;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #7db54f;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px 4px;
+  font-weight: 400;
+}
+
 
 .button-brown:hover {
   background-color: #615048;
@@ -285,8 +307,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 85px;
-  padding-right: 85px;
+  padding: 20px 85px;
 }
 
 .reasons-item {
@@ -302,8 +323,8 @@ body {
   min-height: 385px;
   min-width: 400px;
   display: flex;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
 .reasons-item-big:last-child {
@@ -322,6 +343,7 @@ body {
   max-width: 175px;
 }
 
+
 .reasons-title::after {
 content: "";
 position: absolute;
@@ -329,12 +351,13 @@ height: 2px;
 width: 60px;
 bottom: -32px;
 left: 50%;
-background-color: rgba(0, 0, 0, 0.2);
+background-color: rgba(0, 0, 0, 0.3);
 transform: translateX(-50%);
---color-white: rgb(255, 255, 255, 0.2);
+--color-white: rgba(255, 255, 255, 0.3);
 }
 
-.reasons-item:has(.reasons-img) .reasons-title::after {
+
+.reasons-item-big .reasons-title::after {
   background-color: var(--color-white);
 }
 
@@ -395,6 +418,9 @@ transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 .promo-item-description {
@@ -490,6 +516,7 @@ transform: translateX(-50%);
   margin:0;
   padding: 0;
   margin-bottom: 20px;
+  max-width: 475px;
 }
 
 .newsletters-wrap {
@@ -505,6 +532,7 @@ transform: translateX(-50%);
   margin: 0;
   padding: 0;
   margin-bottom: 54px;
+  max-width: 475px;
 }
 
 .email-placeholder {
@@ -1002,6 +1030,7 @@ transform: translate(50%, -50%);
   color: #ffffff;
   border-radius: 4px;
 }
+
 /*Почему не встают кнопки (по макету сам текст на 80 px a у меня почему-то 90)*/
 .product-info {
   background-color: #756157;
@@ -1059,7 +1088,7 @@ transform: translate(50%, -50%);
 }
 
 .pagination-link:focus:not(.pagination-link-current) {
-  border: 1px solid #82B3D3;
+  border-color:#82B3D3;
 }
 
 .pagination-link:active:not(.pagination-link-current) {
