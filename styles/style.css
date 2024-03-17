@@ -17,6 +17,7 @@
 * {
   box-sizing: border-box;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -44,6 +45,11 @@ html {
   color: inherit;
   text-decoration: none;
 }
+
+.button-icon-blue {
+  fill: #83B3D3;
+}
+
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -114,7 +120,10 @@ body {
 
 }
 
-/*Почему не работает(( */
+.navigation-icon {
+  fill:#000000;
+}
+
 .button-icon-brown:hover svg {
   fill: #756157;
 }
@@ -151,7 +160,21 @@ body {
   text-align: center;
   text-transform: uppercase;
   padding: 22px 12px;
+  color: #000000;
 }
+
+.navigation-user-link:hover .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-user-link:focus .navigation-icon {
+  fill: #756157;
+}
+
+.navigation-user-link:active .navigation-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 
 .navigation-user-item {
   position: relative;
@@ -403,6 +426,7 @@ transform: translateX(-50%);
 .promo-img {
   order: -1;
   margin: 0 auto;
+  fill: #83B3D3;
 }
 
 .book-wrap {
@@ -569,16 +593,15 @@ transform: translateX(-50%);
   left: 0;
 }
 
-/*Тоже не работает по той же причине видимо */
-.button-icon-blue:hover svg {
+.socials-button:hover .button-icon-blue {
   fill: #68A2CA;
 }
 
-.button-icon-blue:focus svg {
+.button-icon-blue:focus {
   fill: #68A2CA;
 }
 
-.button-icon-blue:active svg {
+.button-icon-blue:active {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -593,15 +616,15 @@ transform: translateX(-50%);
 
 
 .footer-contacts-phone:hover {
-  fill: #756157;
+  color: #756157;
 }
 
 .footer-contacts-phone:focus {
-  fill: #756157;
+  color: #756157;
 }
 
 .footer-contacts-phone:active {
-  fill: rgba(117, 97, 87, 0.3);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 
