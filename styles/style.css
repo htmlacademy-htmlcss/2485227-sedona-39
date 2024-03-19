@@ -248,20 +248,21 @@ body {
 }
 
 .button-blue:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button-blue:focus {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button-blue:active {
-  background-color: #6C9E42;
+  background-color: #82b3d3;
+  ;
   color: rgba(255, 255, 255, 0.3);
 }
 
 
-.button-blue, .button-brown:disabled {
+.button-blue, .button-brown:disabled, .add-to-favourites-added {
   background-color: #E5E5E5;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -781,10 +782,6 @@ transform: translate(50%, -50%);
   opacity: 0.3;
 }
 
-
-
-
-
 .catalog-filter {
   margin: 0 auto;
   display: flex;
@@ -942,6 +939,7 @@ transform: translate(50%, -50%);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
+  text-align: center;
   border: none;
   padding: 8px 50px;
   border-radius: 4px;
@@ -955,6 +953,7 @@ transform: translate(50%, -50%);
   line-height: 20px;
   background-color: transparent;
   border: none;
+  text-align: center;
   padding: 8px 50px;
   border-radius: 4px;
 }
@@ -1232,6 +1231,27 @@ transform: translate(50%, -50%);
   border: none;
 }
 
+
+.add-to-favourites-added {
+  background-color: #7db54f;
+}
+
+.add-to-favourites-added:hover {
+  background-color: #6c9e42;
+}
+
+.add-to-favourites-added:focus {
+  background-color: #6c9e42;
+}
+
+.add-to-favourites-added:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+
+}
+
+
+
 .stars {
   max-width: 140px;
   padding: 10px 0;
@@ -1311,15 +1331,16 @@ transform: translate(50%, -50%);
 }
 
 .pagination-link:hover:not(.pagination-link-current) {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .pagination-link:focus:not(.pagination-link-current) {
-  border-color:#82B3D3;
+  border-color:#82b3d3;
 }
 
 .pagination-link:active:not(.pagination-link-current) {
-  background: rgba(255, 255, 255, 0.3);
+  background: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-item {
