@@ -853,9 +853,15 @@ transform: translate(50%, -50%);
   border: 2px solid #83B3D3;
 }
 
-.button {
+.button-reset {
+  all: unset;
   cursor: pointer;
-  border: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.button-reset:focus {
+  outline: blue 1px auto;
 }
 
 .form-buttons {
@@ -1086,7 +1092,7 @@ transform: translate(50%, -50%);
 
 .product-card-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 140px);
   gap: 16px 20px;
 }
 
