@@ -119,14 +119,15 @@
 
       <fieldset class="slider">
         <legend class="filter-group-title">Стоимость, ₽:</legend>
-        <div class="range-wrapper-input">
-          <div class="price-input-wrapper">
-            <label class="price-label" for="price">от</label>
-            <input id="price" class="range-input" type="number" value="0" placeholder="0" name="min-price">
+        <div class="range-input-group-wrap">
+          <div class="range-input-wrap">
+            <label class="price-label" for="price-min">от</label>
+            <input id="price-min" class="range-input range-input-min" type="number" value="0" placeholder="0" name="min-price">
           </div>
-          <div class="range-wrapper-input">
-            <label class="price-label" for="price">до</label>
-            <input id="price" class="range-input" type="number" value="9000" placeholder="9000" name="max-price">
+
+          <div class="range-input-wrap">
+            <label class="price-label" for="price-max">до</label>
+            <input id="price-max" class="range-input range-input-max" type="number" value="9000" placeholder="9000" name="max-price">
           </div>
         </div>
 
@@ -134,17 +135,15 @@
         <div class="range">
           <div class="range-scale">
             <div class="range-bar" style="left: 0; width: 216px">
-              <button class="range-toggle toggle-min">
+              <button type="button" class="range-toggle toggle-min">
                 <span class="visually-hidden">Изменить минимальную цену</span>
               </button>
-              <button class="range-toggle toggle-max">
+              <button type="button" class="range-toggle toggle-max">
                 <span class="visually-hidden">Изменить максимальную цену</span>
               </button>
             </div>
           </div>
           </div>
-
-
 
       </fieldset>
 

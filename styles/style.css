@@ -46,6 +46,17 @@ html {
   text-decoration: none;
 }
 
+.button-reset {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.button-reset:focus {
+  outline: blue 1px auto;
+}
+
 .button-icon-blue {
   fill: #83B3D3;
 }
@@ -798,7 +809,18 @@ transform: translate(50%, -50%);
   margin:0;
   padding: 0;
   width: 151px;
-  margin-right: 140px;
+}
+
+.filter-group-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+
 }
 
 .price-filter {
@@ -809,30 +831,67 @@ transform: translate(50%, -50%);
   border: none;
   max-width: 288px;
   min-height: 104px;
+  color: #ffffff;
+  margin-left: auto;
+
 }
 
-.range-wrapper-input {
+.range-input-group-wrap {
   display: flex;
   gap: 2px;
   max-width: 288px;
+  margin-bottom: 36px;
 
 }
 
+.range-input-wrap {
+  position: relative;
+}
+
+.price-label {
+  position: absolute;
+  color: rgb(0, 0, 0, 0.3);
+  right: 20px;
+  top: 12px;
+
+}
+
+
+.range-input {
+  width: 143px;
+  padding: 12px 52px 12px 20px;
+  font: inherit;
+  text-align: left;
+  background-color: #f2f2f2;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0 ;
+}
+
+.range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
 
 .range-scale {
   position: relative;
   height: 4px;
-  margin-bottom: 16px;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255, 0.3);
   border-radius: 2px;
 }
 
 .range-bar {
   position: relative;
   height: 4px;
-  margin-bottom: 16px;
-  background-color: #000000;
-
+  background-color: #ffffff;
 }
 
 .range-toggle {
@@ -853,20 +912,20 @@ transform: translate(50%, -50%);
   border: 2px solid #83B3D3;
 }
 
-.button-reset {
-  all: unset;
-  cursor: pointer;
-  color: inherit;
-  font-family: inherit;
+.toggle-min {
+  top: -8px;
+  left: 0;
 }
 
-.button-reset:focus {
-  outline: blue 1px auto;
+.toggle-max {
+  top: -8px;
+  right: 0;
 }
+
 
 .form-buttons {
   margin: 0;
-  margin-left: auto;
+  margin-left: 70px;
   padding: 0;
   min-width: 191px;
   min-height: 34px;
@@ -1040,6 +1099,7 @@ transform: translate(50%, -50%);
   padding: 14px 52px 14px 21px;
   outline: 2px solid #e5e5e5;
   border: none;
+  border-radius: 4px;
 
 }
 
