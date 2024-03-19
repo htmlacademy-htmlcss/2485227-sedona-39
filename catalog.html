@@ -36,7 +36,8 @@
               <svg class="navigation-icon fovourites-counter" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"  viewBox="0 0 20 20">
                 <path d="M9.9 19a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6.1 6.9 6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
               </svg>
-              <span class="visually-hidden">Избранное 12 позиций</span>
+              <span class="visually-hidden">Избранное</span>
+              <span class="favourites-counter" >12</span>
             </a>
           </li>
           <li class="navigation-book-button">
@@ -55,12 +56,12 @@
     <ul class="breadcrumbs list-reset">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-item-link link-reset" href="index.html">
-          <svg class="breadcrumbs-home-icon svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="13"  viewBox="0 0 13 13"><path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg>
-          <span class="visually-hidden">Домой</span>
+          <svg class="breadcrumbs-home-icon svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="13"  viewBox="0 0 13 13"><path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg>
+          <span class="visually-hidden">На главную</span>
         </a>
       </li>
       <li class="breadcrumbs-item">
-        <a class="breadcrumbs-item-link link-reset">Гостиницы</a>
+        <a class="breadcrumbs-item-link link-reset" href="catalog.html">Гостиницы</a>
       </li>
     </ul>
   </header>
@@ -114,25 +115,39 @@
           </label>
         </li>
         </ul>
-
       </fieldset>
-      <fieldset class="slider"><legend class="filter-group-title">Стоимость, ₽:</legend>
-        <div class="price-wrapper">
+
+      <fieldset class="slider">
+        <legend class="filter-group-title">Стоимость, ₽:</legend>
+        <div class="range-wrapper-input">
           <div class="price-input-wrapper">
             <label class="price-label" for="price">от</label>
-            <input id="price" class="price" type="number" placeholder="0" name="from">
+            <input id="price" class="range-input" type="number" value="0" placeholder="0" name="min-price">
           </div>
-          <div class="price-input-wrapper">
+          <div class="range-wrapper-input">
             <label class="price-label" for="price">до</label>
-            <input class="price" type="number" placeholder="9000" name="to">
+            <input id="price" class="range-input" type="number" value="9000" placeholder="9000" name="max-price">
           </div>
         </div>
-          <div class="price-range">
-            <button class="button-low" type="button"></button>
-            <div class="price-filled"></div>
-            <button class="button-high" type="button"></button>
+
+
+        <div class="range">
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; width: 216px">
+              <button class="range-toggle toggle-min">
+                <span class="visually-hidden">Изменить минимальную цену</span>
+              </button>
+              <button class="range-toggle toggle-max">
+                <span class="visually-hidden">Изменить максимальную цену</span>
+              </button>
+            </div>
           </div>
+          </div>
+
+
+
       </fieldset>
+
       <fieldset class="form-buttons">
         <button class="button-filter-submit button button-blue" type="submit">Применить</button>
         <button class="button-filter-reset button button-transparent" type="reset">Сбросить</button>
@@ -143,15 +158,17 @@
   </section>
   <section class="catalog-menu">
     <h2 class="catalog-title">Найдено гостиниц: 38</h2>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
+      <div class="select-control-wrap">
+        <select class="select-control" aria-label="Сортировка">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+      </div>
       <ul class="catalog-view-list list-reset">
         <li class="catalog-view-item">
           <a href="#" class="catalog-view-button link-reset">
-            <svg class="grid-layout-icon svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14"  viewBox="0 0 16 14"><path    d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></svg>
+            <svg class="grid-layout-icon svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14"  viewBox="0 0 16 14"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></svg>
             <span class="visually-hidden">Показать плитками</span>
           </a>
         </li>
@@ -182,9 +199,9 @@
           <p class="product-type">Гостиница</p>
           <p class="product-price">От 4000 ₽</p>
           <a class="product-info button-brown link-reset" href="#">Подробнее</a>
-          <a class="add-to-favourites button-blue link-reset" href="#">В избранное</a>
-          <p class="stars"><span class=" four-stars visually-hidden">Отель 4 звезды</span></p>
-          <p class="card-rating">Рейтинг: 8,5</p>
+          <button type="button" class="add-to-favourites button-blue link-reset" href="#">В избранное</button>
+          <p class="stars four-stars"><span class="visually-hidden">Отель 4 звезды</span></p>
+          <p class="product-rating">Рейтинг: 8,5</p>
         </div>
       </li>
 
@@ -199,9 +216,9 @@
           <p class="product-type">Гостиница</p>
           <p class="product-price">От 5000 ₽</p>
           <a class="product-info button-brown link-reset" href="#">Подробнее</a>
-          <a class="add-to-favourites button-blue link-reset" href="#">В избранное</a>
-          <p class="stars"><span class=" four-stars visually-hidden">Отель 4 звезды</span></p>
-          <p class="card-rating">Рейтинг: 9,2</p>
+          <button type="button" class="add-to-favourites button-blue link-reset" href="#">В избранное</button>
+          <p class="stars four-stars"><span class="visually-hidden">Отель 4 звезды</span></p>
+          <p class="product-rating">Рейтинг: 9,2</p>
         </div>
       </li>
       <li class="product-card">
@@ -215,9 +232,9 @@
           <p class="product-type">Гостиница</p>
           <p class="product-price">От 2500 ₽</p>
           <a class="product-info button-brown link-reset" href="#">Подробнее</a>
-          <a class="add-to-favourites button-blue link-reset" href="#">В избранное</a>
-          <p class="stars"><span class="three-stars visually-hidden">Отель 3 звезды</span></p>
-          <p class="card-rating">Рейтинг: 6,9</p>
+          <button type="button" class="add-to-favourites button-blue link-reset" href="#">В избранное</button>
+          <p class="stars three-stars"><span class=" visually-hidden">Отель 3 звезды</span></p>
+          <p class="product-rating">Рейтинг: 6,9</p>
         </div>
       </li>
       <li class="product-card">
@@ -231,9 +248,9 @@
           <p class="product-type">Гостиница</p>
           <p class="product-price">От 2500 ₽</p>
           <a class="product-info button-brown link-reset" href="#">Подробнее</a>
-          <a class="add-to-favourites button-blue link-reset" href="#">В избранное</a>
-          <p class="stars"><span class="two-stars visually-hidden">Отель 2 звезды</span></p>
-          <p class="card-rating">Рейтинг: 5,0</p>
+          <button type="button" class="add-to-favourites button-blue link-reset" href="#">В избранное</button>
+          <p class="stars two-stars"><span class="visually-hidden">Отель 2 звезды</span></p>
+          <p class="product-rating">Рейтинг: 5,0</p>
         </div>
       </li>
     </ul>

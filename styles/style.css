@@ -119,23 +119,14 @@ body {
   text-align: center;
   display: block;
   padding: 20px 16px;
-
 }
 
-.navigation-icon {
-  fill:#000000;
+.navigation-link:hover  {
+  color: #756157;
 }
 
-.button-icon-brown:hover svg {
-  fill: #756157;
-}
-
-.button-icon-brown:focus svg{
-  fill: #756157;
-}
-
-.button-icon-brown:active svg {
-  fill: rgba(117, 97, 87, 0.3);
+.navigation-link:focus {
+  color: #756157;
 }
 
 .navigation-link[aria-current] {
@@ -152,6 +143,24 @@ body {
   top: 100%;
   transform: translateX(-50%);
 }
+
+.navigation-icon {
+  fill:#000000;
+}
+
+.button-icon-brown:hover  {
+  fill: #756157;
+}
+
+.button-icon-brown:focus {
+  fill: #756157;
+}
+
+.button-icon-brown:active {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+
 
 .navigation-user-link {
   font-size: 16px;
@@ -197,7 +206,6 @@ body {
   position: relative;
 }
 
-/*почему не умещается в кружок?*/
 .favourites-counter {
   font-family: inherit;
   position: absolute;
@@ -210,6 +218,8 @@ body {
   line-height: 10px;
   padding: 5px 4px;
   font-weight: 400;
+  top: 5px;
+
 }
 
 
@@ -568,7 +578,6 @@ transform: translateX(-50%);
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  line-height: 36px;
   text-align: center;
   background-color: #82B3D3;
   color:#ffffff;
@@ -680,6 +689,7 @@ transform: translateX(-50%);
   background-size: 100% auto;
   margin: 0;
   padding: 35px 70px 70px 70px;
+  background-color: #ab8e7f;
 }
 
 .inner-header-title {
@@ -693,15 +703,13 @@ transform: translateX(-50%);
   padding: 0;
 }
 
-/*Почему если указывать gap:28px; как и должно быть по идее, все слипается?  */
-
 .breadcrumbs {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   color: #ffffff;
   display: flex;
-  gap: 45px;
+  gap: 26px;
   align-items: center;
 }
 
@@ -709,13 +717,14 @@ transform: translateX(-50%);
   position: relative;
 }
 
+
 .breadcrumbs-item:not(:last-child)::after {
 content: "";
 position: absolute;
 width: 8px;
 height: 20px;
 top: 50%;
-right: -30px;
+right: -14px;
 background-image: url("../images/icons/breadcrumbs-divider-icon.svg");
 background-repeat: no-repeat;
 background-size: contain;
@@ -732,17 +741,38 @@ transform: translate(50%, -50%);
   left: 0;
 }
 
-.breadcrumbs-item:hover {
-  color: (255, 255, 255, 0.6);
+.breadcrumbs-item-link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 21px;
+  min-width: 13px;
+
 }
 
-.breadcrumbs-item:focus {
-  color: #ffffff;
+.breadcrumbs-home-icon {
+  padding-bottom: 2px;
 }
 
-.breadcrumbs-item:active {
-  color: rgba(255, 255, 255, 0.3);
+
+.breadcrumbs-home-icon {
+  fill:#ffffff;
 }
+
+.breadcrumbs-item-link:hover  {
+  opacity: 0.6;
+}
+
+.breadcrumbs-item-link:focus {
+  opacity: 0.6;
+}
+.breadcrumbs-item-link:active {
+  opacity: 0.3;
+}
+
+
+
+
 
 .catalog-filter {
   margin: 0 auto;
@@ -777,10 +807,55 @@ transform: translate(50%, -50%);
 
 .slider {
   border: none;
+  max-width: 288px;
+  min-height: 104px;
+}
+
+.range-wrapper-input {
+  display: flex;
+  gap: 2px;
+  max-width: 288px;
+
+}
+
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: #000000;
+
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
 }
 
 .button {
   cursor: pointer;
+  border: none;
 }
 
 .form-buttons {
@@ -802,7 +877,6 @@ transform: translate(50%, -50%);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
   border: none;
   padding: 8px 50px;
   border-radius: 4px;
@@ -899,23 +973,25 @@ transform: translate(50%, -50%);
 }
 
 .catalog-view-button:hover {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .catalog-view-button:focus {
-  border: 2px solid #68A2CA;
+  outline: 2px solid #68A2CA;
 }
 
 .catalog-view-button:active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .catalog-view-button {
   padding: 17px 16px;
-  border: 2px solid #E5E5E5;
+  outline: 2px solid #E5E5E5;
   border-radius: 4px;
   position: relative;
   display: flex;
+  width: 48px;
+  height: 48px;
 }
 
 .grid-layout-icon {
@@ -925,6 +1001,7 @@ transform: translate(50%, -50%);
   bottom: 0;
   right: 0;
   left: 0;
+
 }
 
 .card-layout-icon {
@@ -946,13 +1023,52 @@ transform: translate(50%, -50%);
 }
 
 .select-control {
+  appearance: none;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   text-align: left;
   color: #333333;
   width: 292px;
+  min-height: 49px;
+  padding: 14px 52px 14px 21px;
+  outline: 2px solid #e5e5e5;
+  border: none;
+
 }
+
+.select-control:hover {
+  outline: 2px solid #000000;
+}
+
+.select-control:focus {
+  outline: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  outline: 2px solid #000000;
+}
+
+
+.select-control-wrap {
+  position: relative;
+  margin-left: auto;
+}
+
+
+.select-control-wrap::after {
+  content:"";
+  background-image: url("../images/icons/select-arrow.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 8px;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+
+}
+
+
 
 .product-card {
   width: 340px;
@@ -978,6 +1094,7 @@ transform: translate(50%, -50%);
   display: block;
   padding: 0;
   margin: 0;
+  background-color: #68a2ca;
 }
 
 .product-card-link {
@@ -996,6 +1113,8 @@ transform: translate(50%, -50%);
   margin: 0;
   padding: 0;
   max-width: 300px;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .product-type {
@@ -1009,6 +1128,10 @@ transform: translate(50%, -50%);
   margin: 0;
 }
 
+.product-type, .product-price, .product-rating {
+  color: #333333;
+
+}
 
 .product-price {
   font-size: 18px;
@@ -1031,7 +1154,7 @@ transform: translate(50%, -50%);
   border-radius: 4px;
 }
 
-/*Почему не встают кнопки (по макету сам текст на 80 px a у меня почему-то 90)*/
+
 .product-info {
   background-color: #756157;
   padding: 8px 26px;
@@ -1040,9 +1163,41 @@ transform: translate(50%, -50%);
 .add-to-favourites {
   background-color: #82B3D3;
   padding: 8px 20px;
+  border: none;
 }
 
-.card-rating {
+.stars {
+  max-width: 140px;
+  padding: 10px 0;
+  margin: 0;
+  background-position: left center;
+}
+.one-star {
+  background-image: url("../images/icons/one-star.svg");
+  background-repeat: no-repeat;
+}
+
+.two-stars {
+  background-image: url("../images/icons/two-stars.svg");
+  background-repeat: no-repeat;
+}
+
+.three-stars {
+  background-image: url("../images/icons/three-stars.svg");
+  background-repeat: no-repeat;
+}
+
+.four-stars {
+  background-image: url("../images/icons/four-stars.svg");
+  background-repeat: no-repeat;
+}
+
+.five-stars {
+  background-image: url("../images/icons/five-stars.svg");
+  background-repeat: no-repeat;
+}
+
+.product-rating {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1051,7 +1206,13 @@ transform: translate(50%, -50%);
   display: block;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
 }
+
+
 
 .product-list {
   display: grid;
