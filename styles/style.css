@@ -963,7 +963,7 @@ transform: translate(50%, -50%);
 }
 
 .button-transparent:focus {
-  border: solid 3px #83B3D3;
+  outline: solid 3px #83B3D3;
 }
 
 .button-transparent:active {
@@ -1007,6 +1007,102 @@ transform: translate(50%, -50%);
   flex-direction: column;
   gap: 16px;
 }
+
+
+
+.checkbox {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  left: 0;
+  top: 1px;
+}
+
+.checkbox-input:checked + .checkbox-mark::after {
+  content:"";
+  position: absolute;
+  background-image: url("../images/icons/tick.svg");
+  width: 12px;
+  height: 9px;
+  left: 4px;
+  top: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.checkbox:hover {
+  opacity: 0.6;
+}
+
+.checkbox:focus {
+  opacity: 0.6;
+}
+
+.checkbox:active {
+  opacity: 0.3;
+}
+
+
+/* Вторая форма */
+
+.radio {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.radio-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  left: 0;
+  top: 1px;
+}
+
+.radio-input:checked + .radio-mark::after {
+  content:"";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+}
+
+
+.radio:hover {
+  opacity: 0.6;
+}
+
+.radio:focus {
+  opacity: 0.6;
+}
+
+.radio:active {
+  opacity: 0.3;
+}
+
 
 .catalog-title {
   font-size: 30px;
