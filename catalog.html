@@ -340,9 +340,32 @@
       <h2 class="modal-title">Поиск гостиницы в седоне</h2>
       <form class="booking-form" method="post" action="https://echo.htmlacademy.ru/">
 
+        <div class="booking-date-form-inner">
+            <label class="check-in-label" for="check-in">Дата Заезда:</label>
+            <input class="check-in-input" for="check-in" type="date" placeholder="27 апреля 2020" required>
+
+            <span class="booking-alert">Мы не можем отправить вас в прошлое.</span>
+
+            <label class="check-out-label" for="check-out">Даты Выезда:</label>
+            <input class="check-out-input" id="check-out" type="date" placeholder="1 сентября 2023" required>
+
+            <span class="booking-message">На эти даты есть свободные номера. Пока есть.</span>
+
+          </div>
+
+          <div class="booking-number-form-inner">
+
+            <label for="adults">Взрослые:</label>
+            <input id="adults" type="number">
+
+            <label for="children">Дети:</label>
+                                                  ПОПАП
+            <input id="children" type="number">
+
+          </div>
 
       </form>
-
+      <button type="button" class="search-modal-button button-reset">Найти</button>
 
 
 
