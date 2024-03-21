@@ -341,13 +341,14 @@
       <form class="booking-form" method="post" action="https://echo.htmlacademy.ru/">
 
         <div class="booking-date-form-inner">
-            <label class="check-in-label" for="check-in">Дата Заезда:</label>
-            <input class="check-in-input" for="check-in" type="date" placeholder="27 апреля 2020" required>
+            <label class="modal-form-label check-in-label" for="check-in">Дата Заезда:</label>
+            <input class="check-in-input modal-form-input" for="check-in"  type="text" placeholder="27 апреля 2020" onfocus="(this.type='date')" onblur="(this.type='text')" required >
 
             <span class="booking-alert">Мы не можем отправить вас в прошлое.</span>
 
-            <label class="check-out-label" for="check-out">Даты Выезда:</label>
-            <input class="check-out-input" id="check-out" type="date" placeholder="1 сентября 2023" required>
+            <label class="modal-form-label check-out-label" for="check-out">Даты Выезда:</label>
+            <input class="check-out-input modal-form-input" for="check-out"  type="text" placeholder="1 сентября 2023" onfocus="(this.type='date')" onblur="(this.type='text')" required >
+
 
             <span class="booking-message">На эти даты есть свободные номера. Пока есть.</span>
 
@@ -355,13 +356,26 @@
 
           <div class="booking-number-form-inner">
 
-            <label for="adults">Взрослые:</label>
-            <input id="adults" type="number">
+              <label class="modal-form-label modal-form-counter-label" for="adults">Взрослые:</label>
+              <div class="input-number">
+                <div class="input-number-minus">-</div>
+                <input id="adults" class="input-number-input modal-form-input" type="text">
+                <div class="input-number-plus">+</div>
 
-            <label for="children">Дети:</label>
-                                                  ПОПАП
-            <input id="children" type="number">
+            </div>
 
+
+              <label class="modal-form-label modal-form-counter-label children-counter-label" for="children">Дети:
+                <img class="info-icon" src="images/icons/info-icon.svg" width="26" height="26" alt="Подробнее">
+              </label>
+
+
+              <div class="input-number">
+                <div class="input-number-minus">-</div>
+                <input id="children" class="input-number-input modal-form-input" type="text">
+                <div class="input-number-plus">+</div>
+
+            </div>
           </div>
 
       </form>
