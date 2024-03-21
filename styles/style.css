@@ -229,7 +229,7 @@ body {
   line-height: 10px;
   padding: 5px 4px;
   font-weight: 400;
-  top: 5px;
+  top: 0;
 
 }
 
@@ -1321,12 +1321,18 @@ transform: translate(50%, -50%);
 .product-info {
   background-color: #756157;
   padding: 8px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-to-favourites {
   background-color: #82B3D3;
-  padding: 8px 20px;
+  padding: 8px 8px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -1419,13 +1425,15 @@ transform: translate(50%, -50%);
 .pagination-link {
   color: #ffffff;
   background-color: #82B3D3;
-  padding: 20px 24px;
+  padding: 10px 10px;
   margin: 0;
   min-width: 60px;
   min-height: 60px;
   text-decoration: none;
   border-radius: 4px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-link:hover:not(.pagination-link-current) {
@@ -1615,8 +1623,42 @@ transform: translate(50%, -50%);
   right: 49px;
 }
 
+
+.popover-info {
+  margin: 0;
+  position: absolute;
+  background-color: rgba(51, 51, 51, 1);
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.3);
+  max-width: 256px;
+  min-height: 143px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 15px 18px 18px 22px;
+  right: 112px;
+  bottom: 25px;
+  display: none;
+}
+
+.popover-open {
+  display: block;
+}
+
+.popover-info::before {
+  content: "";
+  background-image: url("../images/icons/pop-up-corner.svg");
+  position: absolute;
+  top: -9px;
+  left: 118px;
+  width: 19px;
+  height: 9px;
+}
+
+
 .modal-form-counter-label:nth-child(3) {
-  margin-left: auto;
+  margin-left: 88px;
 }
 
 .input-number {
@@ -1639,6 +1681,8 @@ transform: translate(50%, -50%);
   text-align: center;
   min-height: 48px;
   width: 110px;
+  flex-grow: 1;
+  font-family: inherit;
 
 }
 
@@ -1651,6 +1695,7 @@ transform: translate(50%, -50%);
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  fill: rgb(117, 97, 87, 0.3);
 }
 
 .input-number-input {
@@ -1679,9 +1724,12 @@ transform: translate(50%, -50%);
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-  padding-left: 20px;
-
 }
+
+.modal-form-date-input::placeholder {
+  padding-left: 20px;
+}
+
 .booking-message {
   font-size: 16px;
   font-weight: 400;
