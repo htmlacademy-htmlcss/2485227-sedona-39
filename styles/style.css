@@ -91,12 +91,10 @@ body {
   box-shadow: 0 0 15px 0 #00000033;
 }
 
-.page-header {
-  padding: 0 70px;
-}
-
+.page-header,
 .inner-header {
   padding: 0 70px;
+  z-index: 1;
 }
 
 .page-navigation,
@@ -104,8 +102,8 @@ body {
   display: flex;
   justify-content: space-between;
   -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
 }
 
 .logo:hover {
@@ -572,7 +570,7 @@ background-color: rgba(0, 0, 0, 0.3);
   max-width: 475px;
 }
 
-.email-placeholder {
+.newsletters-email-input {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -874,6 +872,15 @@ background-position: center;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+}
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.range-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid rgba(131, 179, 211, 1);
 }
 
 .range-input-max {
@@ -1221,15 +1228,15 @@ background-position: center;
 }
 
 .select-control:hover {
-  outline: 2px solid #000000;
+  outline: 2px solid #68a2ca;
 }
 
 .select-control:focus {
   outline: 2px solid #68a2ca;
 }
 
-.select-control:active {
-  outline: 2px solid #000000;
+.select-control:disabled {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1520,16 +1527,17 @@ background-position: center;
   height: 100%;
   background: rgba(242, 242, 242, 0.8);
   display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
   position: relative;
-  margin: auto;
   padding: 65px 70px;
   background-color: #ffffff;
   width: 717px;
   border-radius: 30px;
-  top: 25%;
+
 }
 
 .modal-close-button {
@@ -1865,6 +1873,16 @@ background-position: center;
   border-radius: 4px;
   background-color: #f2f2f2;
 }
+
+.modal-form-input:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.modal-form-input:focus {
+  background-color: rgba(230, 230, 230, 1);
+  outline: 3px solid rgba(131, 179, 211, 1)
+}
+
 
 .modal-form-input::-webkit-input-placeholder {
   font-size: 18px;

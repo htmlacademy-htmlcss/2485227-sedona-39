@@ -93,6 +93,7 @@ body {
 
 .page-header {
   padding: 0 70px;
+  z-index: 1;
 }
 
 .inner-header {
@@ -104,8 +105,8 @@ body {
   display: flex;
   justify-content: space-between;
   -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
 }
 
 .logo:hover {
@@ -1221,15 +1222,15 @@ background-position: center;
 }
 
 .select-control:hover {
-  outline: 2px solid #000000;
+  outline: 2px solid #68a2ca;
 }
 
 .select-control:focus {
   outline: 2px solid #68a2ca;
 }
 
-.select-control:active {
-  outline: 2px solid #000000;
+.select-control:disabled {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 
