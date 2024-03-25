@@ -659,8 +659,9 @@ background-color: rgba(0, 0, 0, 0.3);
   fill: #68a2ca;
 }
 
-.button-icon-blue:focus {
-  fill: #68a2ca;
+.socials-button:focus .button-icon-blue {
+  fill: #68a3ca;
+
 }
 
 .button-icon-blue:active {
@@ -1790,6 +1791,9 @@ background-position: center;
   outline: none;
 }
 
+.children-counter-button:focus .popover {
+  display: block;
+}
 .popover-open {
   display: block;
 }
@@ -1927,6 +1931,7 @@ background-position: center;
   color: #000000;
   padding-left: 20px;
   width: 440px;
+  font-family: inherit;
 
 }
 
@@ -1974,7 +1979,6 @@ background-position: center;
 
 .search-modal-button:focus {
   background-color: #68a2ca;
-  outline: none;
 
 }
 
