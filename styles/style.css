@@ -1787,10 +1787,6 @@ background-position: center;
   display: block;
 }
 
-.children-counter-button:focus {
-  outline: none;
-}
-
 .children-counter-button:focus .popover {
   display: block;
 }
